@@ -17,8 +17,6 @@ AGE = int(input('What is your Age?:'))
 # cheking if the age is within parameters
 if not (AGE >= 24 and AGE < 75):
     rejectLoan("Age Restriction")
-
-SAL = int(input('What is your monthy Salary?'))
 SAL = int(input('What is your monthy Salary?'))
 RENT = int(input('What is your monthy RENT?:'))
 SCH_FEES = int(input('What is your monthy Scool_Fees?:'))
@@ -28,13 +26,18 @@ OTHER_INCOME = float(input('What is your OTHER INCOME?'))
 
 TOTAL_EXPENSES = RENT+SCH_FEES+FUEL+FEEDING
 
-# checking if the client is qualified for more cash.
-
-
 LOAN_AMOUNT = int(input('What amount are you applying for?:'))
 _35_OF_SALARY = 0.35 * SAL
 _70_OF_SALARY = 0.70 * SAL
 Fifty_percent_Sal = 0.5 * SAL
+
+# checking if the client is qualified for more cash.
+
+if TOTAL_EXPENSES < _35_OF_SALARY and LOAN_AMOUNT < _70_OF_SALARY:
+    print("you qualify for up to :" + str(_70_OF_SALARY));
+    if (int(input("Do you want to increase your load amount? <1 : yes> <0 : no>")) == 1):
+        LOAN_AMOUNT = int(input('Enter new loan amount, up to: ' + str(_70_OF_SALARY)))
+
 
 # if Temp_Expenses >
 if TOTAL_EXPENSES <= (_35_OF_SALARY):
