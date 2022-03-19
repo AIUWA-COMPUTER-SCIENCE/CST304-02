@@ -10,6 +10,8 @@ def rejectLoan(reason):
     print("reason:" + reason)
     exit()
 
+STD_LOAN_DURATION = 2
+INTEREST_RATE = 6.5
 
 NAME = input('What is your Name?:')
 AGE = int(input('What is your Age?:'))
@@ -17,6 +19,7 @@ AGE = int(input('What is your Age?:'))
 # cheking if the age is within parameters
 if not (AGE >= 24 and AGE < 75):
     rejectLoan("Age Restriction")
+
 SAL = int(input('What is your monthy Salary?'))
 RENT = int(input('What is your monthy RENT?:'))
 SCH_FEES = int(input('What is your monthy Scool_Fees?:'))
@@ -31,14 +34,21 @@ _35_OF_SALARY = 0.35 * SAL
 _70_OF_SALARY = 0.70 * SAL
 Fifty_percent_Sal = 0.5 * SAL
 
-# checking if the client is qualified for more cash.
+LOAN_DURATION = int(input('Please enter loan duration:<minimum = 2 years>?:'))
 
+
+
+
+# checking if the client is qualified for more cash.
 if TOTAL_EXPENSES < _35_OF_SALARY and LOAN_AMOUNT < _70_OF_SALARY:
     print("you qualify for up to :" + str(_70_OF_SALARY));
     if (int(input("Do you want to increase your load amount? <1 : yes> <0 : no>")) == 1):
         LOAN_AMOUNT = int(input('Enter new loan amount, up to: ' + str(_70_OF_SALARY)))
 
 
+
+
+# Simple interest
 # if Temp_Expenses >
 if TOTAL_EXPENSES <= (_35_OF_SALARY):
 
