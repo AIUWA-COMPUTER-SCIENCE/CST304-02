@@ -34,7 +34,9 @@ _35_OF_SALARY = 0.35 * SAL
 _70_OF_SALARY = 0.70 * SAL
 Fifty_percent_Sal = 0.5 * SAL
 
-LOAN_DURATION = int(input('Please enter loan duration:<minimum = 2 years>?:'))
+LOAN_DURATION = 2;
+if AGE < 70:
+    LOAN_DURATION = int(input('Please enter loan duration:<minimum = 2 years>?:'))
 
 
 
@@ -49,22 +51,25 @@ if TOTAL_EXPENSES < _35_OF_SALARY and LOAN_AMOUNT < _70_OF_SALARY:
 
 
 # Simple interest
+# calculating the interest rate.
+
+INTEREST_RATE = LOAN_AMOUNT * (1 + INTEREST_RATE * LOAN_DURATION);
+
+
+
 # if Temp_Expenses >
 if TOTAL_EXPENSES <= (_35_OF_SALARY):
-
   if LOAN_AMOUNT <= (Fifty_percent_Sal):
     #if TOTAL_EXPENSES <= (0.35*SAL):
      print()
      print()
      print("LOAN Applican SUMARRY (RESULT)")
-     print("==============================")
-     print("Condition met")
-     print("=============")
-     print("1. Your Total Expenses is <= 35% of Salary")
-     print("2. Your Loan Amount is <= 50% of Salary")
-     print("------------------------------------------")
      print()
      print("Loan ACCEPTED")
+     print("Amount recieved: ", LOAN_AMOUNT )
+     print("Loan Duration", LOAN_DURATION)
+     print("Interest owed: ", INTEREST_RATE)
+
      print("Amount approved is:",LOAN_AMOUNT)
 
   else:  # Loan application REJECTED
